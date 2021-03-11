@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Stock Data</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='/assets/dist/css/bootstrap.min.css') }}">
+
+    <!-- Custom styles for this template -->
+   
+</head>
+
+<body>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Stock Price</th>
+      <th scope="col">52 Week High</th>
+      <th scope="col">52 Week Low</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in range(49): %}
+      <tr>
+        <th scope="row"> {{i}} </th>
+        <td>{{info_array[i][0]}}</td>
+        <td>{{info_array[i][1]}}</td>
+        <td>{{info_array[i][2]}}</td>
+        <td>{{info_array[i][3]}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</html>
