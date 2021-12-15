@@ -1,8 +1,9 @@
+# imports
 from flask import Flask, request, redirect, render_template
 from web_scraper import scrape_yahoo
 app = Flask(__name__)
 
-
+# home of site
 @app.route("/")
 def home():
 
@@ -15,6 +16,8 @@ def home():
 
     return render_template("index.html", info_array=info_array)
 
-
+# debugger on
 if __name__ == "__main__":
     app.run(debug=True)
+
+
